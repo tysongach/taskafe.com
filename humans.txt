@@ -1,20 +1,38 @@
-/* the humans responsible & colophon */
-/* humanstxt.org */
+Humans TXT
+humanstxt.org
 
 
-/* TEAM */
-  Web Designer/Developer: Tyson Gach
-  Site: tysongach.com
-  Twitter: @tysongach
-  Location: Brooklyn, NY
+/* People */
+
+Tyson Gach
+Design & Development
+Brooklyn, NY
+http://www.tysongach.com
+@tysongach
+
+Dan Weise
+thundercut
+Design, Logo
+Beacon, NY
+http://www.thundercut.com
 
 
-/* THANKS */
-  Kyle Gach, JavaScript & General Helping Hands, kylegach.com
-  Dan Weise, Logo, thundercut.com
+/* Technology */
 
-/* SITE */
-  Last Update: January 26, 2012
-  Standards: HTML5, CSS3
-  Components: Modernizr, jQuery
-  Software: Espresso 2, CodeKit, Transmit
+Git
+http://git-scm.com
+
+GitHub
+http://github.com
+
+Normalize.css
+http://necolas.github.com/normalize.css
+
+Sass
+http://sass-lang.com
+
+Sublime Text
+http://www.sublimetext.com
+
+ImageOptim
+http://imageoptim.com

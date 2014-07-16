@@ -1,0 +1,29 @@
+ul,
+ol {
+  margin: 0 0 $base-spacing;
+  padding-left: 0;
+
+  li {
+    padding-bottom: $base-spacing / 5;
+    padding-top: $base-spacing / 5;
+  }
+
+  &%bald-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+dl {
+  margin: 0 0 $base-spacing;
+
+  dt {
+    font-weight: bold;
+    margin: ($base-spacing * 1.5) 0 ($base-spacing / 1.5);
+  }
+
+  dd {
+    margin: 0 0 $base-spacing;
+  }
+}
