@@ -1,0 +1,671 @@
+/*
+
+project: Tas Kafé
+author: Tyson Gach
+author url: http://tysongach.com
+date: March 2012
+version: 1.1
+copyright: (c)2011 Tyson Gach, All Rights Reserved
+
+*/
+
+
+
+/* - browser normalize - */
+
+@import "browser-normalize_v1.2.less";
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+p.alert a {
+  background-color: rgb(160, 40, 40);
+  color: @white;
+  display: block;
+  font-size: 20px;
+  left: 0;
+  line-height: 1;
+  padding: 20px 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 999; }
+
+p.alert a:hover {
+  background-color: rgb(140, 30, 30); }
+
+.border-radius (@topleft: 2px, @topright: 2px, @bottomleft: 2px, @bottomright: 2px) {
+	  -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+	  -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+	border-radius: @topleft @topright @bottomright @bottomleft; }
+
+
+
+/* - typography - */
+
+@proxima: "proxima-nova", sans-serif;
+@futura: "futura-pt", sans-serif;
+@light: 300;
+@regular: 400;
+@medium: 500;
+@semibold: 600;
+@bold: 700;
+
+body {
+  font: @light 87.5%/1.625em @proxima; }
+
+h1, h2, h3, h4 {
+  font-family: @futura;
+  font-weight: @bold;
+  line-height: 1.25;
+  margin-bottom: 0.75em;
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 2.25em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.75em; }
+
+h4 {
+  font-size: 1.25em;
+  font-weight: @medium; }
+
+p {
+  margin: 0 0 1.625em 0; }
+
+p:last-child {
+  margin-bottom: 0; }
+
+strong, bold, a, a:active, a:visited {
+  font-weight: @semibold; }
+
+abbr {
+  font-size: 0.8125em;
+  font-weight: @regular;
+  text-transform: uppercase; }
+
+a abbr, a:active abbr, a:visited abbr {
+  font-weight: @semibold; }
+
+textarea, input {
+  font-family: @proxima;
+  font-size: 1em; }
+
+form fieldset {
+  border: none;
+	margin: 0 0 10px 0;
+	padding: 0; }
+
+form fieldset label {
+	display: block;
+	margin: 0 0 4px 0;
+	font-weight: bold; }
+
+form fieldset input[type="text"], form fieldset input[type="email"], form fieldset textarea {
+	background: @white;
+	border: 1px solid #ccc;
+	.border-radius;
+	  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
+	  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
+	display: block;
+	font-size: 1em;
+	margin-bottom: 0.5em;
+	padding: 5px;
+	width: 100%; }
+
+form fieldset.check label {
+	display: inline;
+	font-weight: normal;
+	margin-left: 5px; }
+
+form fieldset input[type="text"]:focus, form fieldset input[type="email"]:focus {
+	border: 1px solid lighten(@blue, 10%);
+	background: #fff; }
+
+form input[type="submit"] {
+  background: @blue;
+  border: darken(@blue, 10%);
+  .border-radius;
+  display: block;
+	font-family: @proxima;
+	font-size: 1em;
+	font-weight: @regular;
+	margin: 0;
+	padding: 6px 14px;
+	text-align: center;
+	  -webkit-transition: all 0.2s ease-in-out;
+	  -moz-transition: all 0.2s ease-in-out;
+	  -o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	width: 100%; }
+
+form input[type="submit"]:hover, form input[type="submit"]:focus {
+	background: darken(@blue, 10%); }
+
+form input[type="submit"]:active {
+	border: 1px solid #ccc;
+	background: #eee; }
+
+header h2 {
+  font-size: 1.25em;
+  font-weight: 700;
+  span {
+    display: block;
+    font-size: 1.625em;
+    letter-spacing: 1px; } }
+
+/*span:before {
+  content: 'Caribbean Coffee';
+    -moz-mask-image: url(http://static.taskafe.com/img/text-mask.png);
+    -o-mask-image: url(http://static.taskafe.com/img/text-mask.png);
+    -webkit-mask-image: url(http://static.taskafe.com/img/text-mask.png);
+  mask-image: url(http://static.taskafe.com/img/text-mask.png); }*/
+
+footer {
+  font-size: 0.75em;
+  line-height: 1.5; }
+
+nav a {
+  font-size: 1em;
+  font-weight: @regular;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+
+#hours, #social-networks, .tags ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+#about {
+  h3 + p {
+    font-size: 1.125em;
+    font-weight: @regular;
+    padding-bottom: 1em;
+    margin-bottom: 1em; }
+  #salutation {
+    font-size: 1.125em;
+    font-weight: @regular; } }
+
+#contact {
+  #hours li {
+    letter-spacing: 1px;
+    font-weight: @semibold;
+    abbr {
+      font-size: 1em;
+      font-weight: @semibold; }
+    span abbr {
+      font-weight: @regular;
+      font-size: 0.75em; } }
+  #newsletter-signup {
+    font-size: 1em;
+    font-weight: @semibold;
+    letter-spacing: 1px;
+    text-transform: uppercase; } }
+
+#coffees {
+  a.mini-cart {
+    font-size: 1.125em;
+    font-weight: @semibold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    span {
+      font-weight: @regular; } }
+  .notice, .category {
+    font-size: 0.75em;
+    font-weight: @semibold;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
+  .purchase-block {
+    font: 0.9375em @proxima;
+    span {
+      font-style: italic; }
+    button#product-addtocart {
+      font: 0.9375em @proxima;
+      letter-spacing: 1px;
+      text-transform: uppercase; } } }
+
+#cart-content {
+  input {
+    font-family: @proxima; }
+  #cart-table {
+    text-align: left;
+    .item-total {
+      text-align: right; } }
+  h4 {
+    font-size: 1.5em; }
+  #cart-footer, .cart-shipping, .cart-discount, .cart-total {
+    text-align: right; } }
+
+
+
+/* - layout - */
+
+header {
+  padding: 3em 0 2em;
+  h1 img {
+    display: block;
+    margin: 0 auto;
+    max-width: 7em;
+    width: 50%; }
+  h2 {
+    display: block;
+    margin: 0.75em auto 0;
+    padding: 0 5%;
+    text-align: center; } }
+
+#main {
+  position: relative; }
+
+section {
+  margin-bottom: 4em; }
+
+nav {
+  margin-bottom: 3em;
+  width: 100%;
+  ol {
+    display: block;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 20em; }
+  li a {
+    float: left;
+    padding: 0.5em 0;
+    text-align: center;
+    width: 33.33333333%; } }
+
+footer {
+  padding: 3em 5% 2em;
+  text-align: center; }
+
+#about {
+  padding: 0 5%;
+  position: relative;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  a.show-hide {
+    border: 1px solid;
+    .border-radius;
+    display: block;
+    font-size: 0.875em;
+    padding: 0.375em 0;
+    text-align: center;
+    width: 100%; }
+  .to-hide {
+    height: 0;
+    opacity: 0; }
+  .showing {
+    height: auto;
+    opacity: 1; }
+  .showing + a {
+    display: none; }
+  #salutation {
+    margin-bottom: 2em;
+    padding: 0.5em 0 1em 5.5em;
+    img {
+      border: 0.25em solid #ddd;
+      left: 0;
+      max-width: 4.5em;
+      position: absolute;
+      top: 0; }
+    span {
+      display: block; } } }
+
+#contact {
+  padding: 0 5%;
+  [itemprop="address"] {
+    left: 0;
+    margin: 0 0 2em 0;
+    width: 50%; }
+  #communication {
+    margin: 0 0 2em 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    span {
+      display: block; } }
+  #hours li {
+    float: left;
+    margin: 0 0.75em 2em 0;
+    padding: 0 0.75em 0 0;
+    border-right: 1px solid #ccc; }
+  #hours li:last-child {
+  	margin: 0;
+  	padding: 0;
+  	border: none; }
+  #hours li span {
+    display: block; }
+  #social-networks {
+    position: absolute;
+    right: 5%;
+    top: 0.25em;
+    li {
+      float: right;
+      margin-left: 1em; }
+    img {
+      max-width: 25px;
+      opacity: 0.75;
+        -webkit-transition: opacity 0.2s ease-in-out;
+        -moz-transition: opacity 0.2s ease-in-out;
+        -o-transition: opacity 0.2s ease-in-out;
+      transition: opacity 0.2s ease-in-out; }
+    img:hover {
+      opacity: 0.5; } }
+  #newsletter-signup {
+    margin: 0 0 2em 0;
+    span {
+      display: block;
+      margin-bottom: 0.5em; }
+    label {
+      display: none; } }
+  #wholesale {
+    border: 1px solid;
+    padding: 1em 5%;
+    a {
+      display: block; }
+    a[href^="tel:"] {
+       }
+    a[href^="mailto:"] {
+       } } }
+
+#coffees {
+  h3 {
+    padding: 0 5%; }
+  a.mini-cart {
+    display: block;
+    margin-bottom: 1.5em;
+    padding: 0.5em 5%; }
+  .product {
+    margin-bottom: 3em;
+    padding: 1.25em 0 0.5em;
+    h4 {
+      padding: 0 5%;
+      margin-bottom: 0.25em;
+      img {
+        margin-right: 0.5em;
+        padding-bottom: 0.125em; } }
+    .tags {
+      padding: 0 5%;
+      margin-bottom: 0.75em;
+      .notice, .category  {
+        display: inline;
+        padding: 0.5em 0.625em;
+        margin-right: 0.75em; } }
+    .product-description {
+      padding: 0 5%;
+      margin-bottom: 1em; }
+    .purchase-block {
+      border-bottom: 1px solid;
+      border-top: 1px solid;
+      .price {
+        float: left;
+        padding: 1em 0 0 5%; }
+      #product-form {
+        button#product-addtocart {
+          border: none;
+          float: right;
+          padding: 1em 0 1em 5%;
+          position: relative;
+          text-align: left;
+          width: 50%; }
+        button#product-addtocart:after {
+          border-style: solid;
+          border-width: 8px;
+          content: "";
+          height: 0;
+          left: -14px;
+          margin-top: -8px;
+          position: absolute;
+          top: 50%;
+          width: 0; } } } } }
+
+#cart-content {
+  padding: 0 5%;
+  h3 {
+    float: left; }
+  .cart-update {
+    float: right; }
+  #cart-table {
+    width: 100%;
+    td.item-qty {
+      width: 10%; }
+    th {
+      width: 65%; }
+    td.item-total {
+      width: 20%; }
+    td.item-options {
+      width: 5%; }
+    tr.row, tr.row-alt {
+       }
+    .item-qty input {
+      max-width: 30px;
+      text-align: center; } }
+  #cart-footer, .cart-shipping, .cart-discount, .cart-total {
+    margin: 1em 0; } }
+
+.alert-noitems {
+  padding: 0 5%; }
+
+
+
+/* - icons - */
+
+
+
+
+
+/* - color - */
+
+@white: rgb(245, 245, 245);
+@light-gray: rgb(232, 232, 234);
+@gray: rgb(180, 180, 190);
+@medium-gray: rgb(110, 110, 110);
+@dark-gray: rgb(55, 55, 55);
+@black: rgb(0, 0, 0);
+@blue: rgb(23, 119, 175);
+@green: rgb(157, 176, 50);
+@yellow: rgb(255, 216, 114);
+@red: rgb(215, 81, 80);
+@brown: rgb(74, 73, 66);
+
+/*html {
+  background: url(http://static.taskafe.com/img/bg.png) repeat; }*/
+
+body {
+  background: url(http://static.taskafe.com/img/bg-photo.png) no-repeat center center fixed;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  background-size: cover;
+  color: @dark-gray; }
+
+a, a:active, a:visited {
+  color: @blue;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+a:hover {
+  color: @dark-gray; }
+
+nav {
+  background-color: @blue;
+  a, a:active, a:visited {
+    color: @white; }
+  a:hover {
+    color: rgb(200, 200, 200);
+    color: rgba(255, 255, 255, 0.6); } }
+
+::-moz-selection {
+  background: @dark-gray;
+  color: @white;
+  text-shadow: none; }
+
+::selection {
+  background: @dark-gray;
+  color: @white;
+  text-shadow: none; }
+
+button#product-addtocart {
+  background-color: @blue;
+  color: @white;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+button#product-addtocart:after {
+  border-color: transparent @blue transparent transparent; }
+
+button#product-addtocart:hover {
+  background-color: darken(@blue, 8%); }
+
+button#product-addtocart:hover:after {
+  border-color: transparent darken(@blue, 8%) transparent transparent; }
+
+header {
+  background-color: rgb(245, 245, 245);
+  background-color: rgba(245, 245, 245, 0.6); }
+
+header h2 {
+  color: @dark-gray; }
+
+#main {
+  background-color: @white; }
+
+#about {
+  a.show-hide {
+    background-color: @light-gray;
+    border-color: darken(@light-gray, 5%); }
+  a.show-hide:hover {
+    background-color: darken(@light-gray, 5%); } }
+
+#contact {
+  #wholesale {
+    background-color: darken(@light-gray, 2%);
+    border-color: darken(@light-gray, 5%); } }
+
+.mini-cart {
+  background: url(../img/zig-bg.png) repeat; }
+
+#coffees {
+  .product {
+    background-color: @light-gray;
+    .category {
+      background-color: @brown;
+      color: @white; }
+    .purchase-block {
+      background-color: darken(@light-gray, 4%);
+      border-color: @white; }
+    .notice.sale {
+      background-color: @green; }
+    .notice.soon {
+      background-color: @yellow; }
+    .notice.sold {
+      background-color: @red; } } }
+
+footer {
+  color: darken(@gray, 10%);
+  a, a:visited {
+    color: darken(@gray, 10%); }
+  a:hover {
+    color: @blue; } }
+
+#cart-body tr.row, #cart-body tr.row-alt {
+  border-bottom: 1px solid @gray; }
+#cart-body tr.row-alt {
+  background-color: light-gray; }
+
+
+button, .button {
+  background-color: @blue;
+  border: none;
+  color: @white;
+  padding: 0.5em 1em;
+  position: relative;
+  font: 0.875em @proxima;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+
+button.secondary {
+  background-color: @gray;
+  color: @dark-gray; }
+
+
+
+/* - responsiveness - */
+
+@media screen and (min-width: 40em) {
+
+  /* - typography - */
+
+  body {
+    font-size: 100%; }
+
+  header h2 {
+    font-size: 1.375em;
+    span {
+      font-size: 1.75em; } }
+
+
+
+  /* - layout - */
+
+  header {
+  	max-width: 40em;
+  	margin: 3em auto 0; }
+
+  #main {
+    max-width: 40em;
+    margin: 0 auto 6em; }
+
+
+
+} /* end media query */
+
+
+
+@media screen and (min-width: 92em) {
+
+  /* - typography - */
+
+  body {
+    font-size: 112.5%; }
+
+
+
+  /* - layout - */
+
+  header {
+    margin-top: 5em; }
+
+  #main {
+    margin-bottom: 10em; }
+
+
+
+} /* end media query */
+
+
+
+@media screen and (min-width: 105em) {
+
+  /* - typography - */
+
+  body {
+    font-size: 125%; }
+
+
+
+} /* end media query */

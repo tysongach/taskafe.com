@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="{{ page.meta_description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="fb:page_id" content="108668305829123" />
+  {{ head_content }}
+  <title>Tas Kaf&eacute;</title>
+  <link rel="stylesheet" href="http://static.taskafe.com/styles/styles.css">
+  <link rel="author" href="http://static.taskafe.com/humans.txt" />
+  <link rel="apple-touch-icon-precomposed" href="http://static.taskafe.com/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://static.taskafe.com/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://static.taskafe.com/apple-touch-icon-114x114-precomposed.png">
+  <script src="{{ 'prototype' | theme_js_url }}"></script>
+  <script src="{{ 'store' | theme_js_url }}"></script>
+  <script src="http://static.taskafe.com/js/modernizr.js"></script>
+  <script src="http://use.typekit.com/gfx7sks.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <script>
+    var _gauges = _gauges || [];
+    (function() {
+      var t   = document.createElement('script');
+      t.type  = 'text/javascript';
+      t.async = true;
+      t.id    = 'gauges-tracker';
+      t.setAttribute('data-site-id', '4ee125bb613f5d36a7000010');
+      t.src = '//secure.gaug.es/track.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(t, s);
+    })();
+  </script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17404425-1']);
+    _gaq.push(['_setDomainName', 'taskafe.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body id="{{ page.permalink }}-page" class="{{ page.permalink }} {{ page.category }}">
+  <header role="banner">
+    <div itemscope itemtype="http://schema.org/Restaurant">
+      <h1 itemprop="name"><a href="/"><img src="http://static.taskafe.com/img/tas-kafe_logo.png" alt="Tas Kaf&eacute;" /></a></h1>
+      <h2 itemprop="description">Micro&ndash;Roasted <span>Caribbean Coffee</span></h1>
+    </div>
+  </header>
+  <div id="main" role="main">
+    <nav role="navigation" class="clearfix">
+      <ol>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#coffees">Kaf&eacute;</a></li>
+      </ol>
+    </nav>
+  	{% if page.category == 'custom' %}
+  	  {{ page_content | paragraphs }}
+  	  {% else %}
+  	  {{ page_content }}
+  	{% endif %}
+  	<footer role="contentinfo">
+  	  <p id="copyright">Copyright &copy; 2010&ndash;2012 Tas Kafe <abbr title="Limited Liability Company">LLC</abbr>. All Rights Reserved. Tas Kaf&eacute;&reg;, is a registered trademark of Tas Kafe <abbr title="Limited Liability Company">LLC</abbr>. Website handcrafted by <a rel="me" href="http://tysongach.com">Tyson Gach</a> in Brooklyn, <abbr title="New York">NY</abbr>.</p>
+  	</footer>
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	    var j$ = jQuery.noConflict();
+	</script>
+	<script>
+	  j$(function(){
+	    j$('a[href*=#]').click(function() {
+	   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+	   && location.hostname == this.hostname) {
+	     var j$target = j$(this.hash);
+	     j$target = j$target.length && j$target
+	     || j$('[name=' + this.hash.slice(1) +']');
+	     if (j$target.length) {
+	    var targetOffset = j$target.offset().top;
+	    j$('html,body')
+	    .animate({scrollTop: targetOffset}, 1000);
+	      return false;
+	     }
+	   }
+	    });
+	  });
+	</script>
+	<script src="http://static.taskafe.com/js/respond.min.js"></script>
+  <script src="http://static.taskafe.com/js/show-hide.js"></script>
+  <noscript><p class="alert"><a href="http://en.wikipedia.org/wiki/Javascript">This website requires JavaScript, please enable it in your browser preferences.</a></p></noscript>
+  <!--[if lt IE 8]><p class="alert"><a href="http://browsehappy.com/">Please note that you are using a less-capable internet browser. For the best experience using this website, consider upgrading.</a></p><![endif]-->
+</body>
+</html>

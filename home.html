@@ -1,0 +1,109 @@
+<section id="about">
+  <h3>About</h3>
+  <p>Tas Kaf&eacute;&mdash;which means&nbsp;cup of coffee in Haitian Creole&mdash;embodies the belief of quality through simplicity. Coffee is complicated, but enjoying a cup should be simple.</p>
+  <div id="full-story" class="to-hide">
+    <p>I first experienced Caribbean coffee while visiting Jamaica in 2000 to attend a wedding. I fell in love with the sweet smoothness of Jamaican coffee from the first sip. That first taste enticed me to bring back as much as I could. From then on I relied on family and friends visiting the Caribbean to bring back beans.</p>
+    <p>Eight years after that first cup, I was fortunate enough to take a trip to Haiti. During the course of volunteer work, I had the opportunity to taste Haitian coffee. Once again I found myself in love. It shared many of the same rich, smooth characteristics as the Jamaican coffee.</p>
+    <p>Aside from the great coffee experience I met with many people, who appreciated the work we were doing, but expressed their desire to be self sufficient. They encouraged us to continue our volunteer work, however, they emphasized the need for us to create jobs.</p>
+    <p>Upon my return I became fixated on developing a product dedicated to, inspired and created by Haiti. The idea was simple: To import, roast, and distribute Caribbean coffee throughout the United States, with the goal to revitalize the coffee industry in this region.</p>
+    <p>Inspired by Haiti and encouraged by family and friends, Tas Kaf&eacute; was conceived in 2009</p>
+    <div id="salutation">
+      <img src="http://static.taskafe.com/img/greg-flaherty.jpg" alt="Greg Flaherty, Owner and Roaster of Tas Kaf&eacute;" />
+      <span><em>Stay Warm &amp; Stay Strong,</em></span>
+      <span>Greg Flaherty, Owner &amp; Roaster</span>
+    </div>
+    <a class="show-hide" href="#full-story">Show Less &uarr;</a>
+  </div>
+  <a class="show-hide" href="#full-story">Read Full Story &darr;</a>
+</section>
+
+<section id="contact">
+  <h3>Contact</h3>
+  <div itemscope itemtype="http://schema.org/Restaurant">
+    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <a itemprop="map" href="http://g.co/maps/wrsuz">
+        <span itemprop="streetAddress">504 Main Street</span><br />
+        <span itemprop="addressLocality">Beacon</span>, <span itemprop="addressRegion"><abbr title="New York">NY</abbr></span> <span itemprop="postalCode">12508</span>
+      </a>
+    </div>
+    <div id="communication">
+      <span itemprop="telephone"><a href="tel:1-845-522-1510">(845) 522-1510</a></span>
+      <span itemprop="email"><a href="mailto:hello@taskafe.com">hello@taskafe.com</a></span>
+    </div>
+    <ol id="hours" class="clearfix">
+      <li><meta itemprop="openingHours" content="Mo-Fr 8:00-12:00"><abbr title="Monday">Mon</abbr>&ndash;<abbr title="Friday">Fri</abbr> <span>8<abbr>am</abbr> &ndash; 12<abbr>pm</abbr></span></li>
+      <li><meta itemprop="openingHours" content="Sa 9:00-17:00"><abbr title="Saturday">Sat</abbr> <span>9<abbr>am</abbr> &ndash; 5<abbr>pm</abbr></span></li>
+      <li><meta itemprop="openingHours" content="Su 9:00-16:00"><abbr title="Sunday">Sun</abbr> <span>9<abbr>am</abbr> &ndash; 4<abbr>pm</abbr></span></li>
+    </ol>
+  </div>
+  <ol id="social-networks">
+    <li><a href="http://facebook.com/taskafe"><img src="http://static.taskafe.com/img/facebook.png" alt="Facebook Icon" /></a></li>
+    <li><a href="http://twitter.com/taskafe"><img src="http://static.taskafe.com/img/twitter.png" alt="Twitter Icon" /></a></li>
+  </ol>
+  <div id="newsletter-signup">
+    <form action="http://taskafe.us2.list-manage.com/subscribe/post?u=58e33ed3078396f377eb4f16a&amp;id=3294214901" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="capture validate">
+      <fieldset>
+      	<span>Join Our Mailing List</span>
+      	<p class="error group" style="display: none;">Please enter your email address.</p>
+        <label for="mce-EMAIL">Email Address</label>
+        <input type="email" value="" name="EMAIL" placeholder="Email Address" class="required email" id="mce-EMAIL">
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+      </fieldset>
+    </form>
+  </div>
+  <div id="wholesale">
+    <p>Interested in <strong>wholesale</strong>? We would love chat with you! Please call or email Greg for details:</p>
+    <a href="tel:1-845-522-1510">(845) 522-1510</a>
+    <a href="mailto:gregflaherty@taskafe.com?subject=Wholesale Inquiry&body=Please be sure to let us know how we can reach you!">wholesale@taskafe.com</a>
+  </div>
+</section>
+
+<section id="coffees">
+  <h3>Kafé</h3>
+  <a href="/cart" title="View Cart" class="mini-cart"> Cart <span>({{ cart.item_count }}) | {{ cart.total | money_with_sign }}</span></a>
+  {% if products.featured != blank %}
+  	{% for product in products.featured %}
+  	<div id="product-{{ forloop.index }}" class="{{ product.css_class }}">
+      <h4><img src="{{ product.image | product_image_url size:"medium" }}" alt="{{ product.name | escape }} Flag" />{{ product.name }}</h4>
+      {% case product.status %}
+        {% when 'sold-out' %}
+        <div class="tags">
+          <div class="notice sold"> Sold Out</div>
+        </div>
+        {% when 'coming-soon' %}
+        <div class="tags">
+          <div class="notice soon">Coming Soon</div>
+        </div>
+        {% when 'active' %}
+        <div class="tags">
+          <ul>
+            {% if product.on_sale %}<li class="notice sale"> On Sale</li>{% endif %}
+            {% for category in product.categories %}<li class="icon category">{{ category.name }}</li>{% endfor %}
+          </ul>
+        </div>
+    			{% if product.description != blank %}
+    			  <div class="product-description">
+      			  {{ product.description | paragraphs }}
+    			  </div>
+    			{% endif %}
+    			<div class="purchase-block clearfix">
+    			  <div class="price"><strong>{{ product.default_price | money_with_sign }}</strong> <span>for</span> 12 oz.</div>
+			      <form id="product-form" method="post" action="/cart">
+            {% if product.has_default_option %}
+              {{ product.option | hidden_option_input }}
+            {% else %}
+              <div id="product-options" class="options">
+                {{ product.options_in_stock | options_select }}
+			        </div>
+            {% endif %}
+			        <button id="product-addtocart" name="submit" type="submit">Add to cart</button>
+            </form>
+			    </div>
+			{% endcase %}
+  	</div>
+  	{% endfor %}
+    {% else %}<p class="alert-noproducts">No products found.</p>
+  {% endif %}
+
+  <a href="/cart" title="View Cart" class="mini-cart">Cart <span>({{ cart.item_count }}) | {{ cart.total | money_with_sign }}</span></a>
+</section>
