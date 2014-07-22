@@ -1,10 +1,14 @@
-@import 'home';
+body {
+  padding-bottom: $base-spacing * 6;
+}
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 16em;
-  padding-left: $base-spacing;
-  padding-right: $base-spacing;
+  @include outer-container;
+  padding-left: $base-spacing / 2;
+  padding-right: $base-spacing / 2;
   position: relative;
+}
+
+.site-header {
+  margin-top: $base-spacing * 3;
 }

@@ -6,21 +6,17 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
 
-  // @include media($small-screen-up) {
-  //   font-size: $base-font-size * 1.0625;
-  // }
+  @include media($small-screen-up) {
+    font-size: $base-font-size * 1.0625;
+  }
 
-  // @include media($medium-screen-up) {
-  //   font-size: $base-font-size * 1.1875;
-  // }
+  @include media($medium-screen-up) {
+    font-size: $base-font-size * 1.1875;
+  }
 
-  // @include media($large-screen-up) {
-  //   font-size: $base-font-size * 1.375;
-  // }
-
-  // @include media($x-large-screen-up) {
-  //   font-size: $base-font-size * 1.5;
-  // }
+  @include media($large-screen-up) {
+    font-size: $base-font-size * 1.375;
+  }
 }
 
 h1,
@@ -102,6 +98,6 @@ cite {
   font-style: italic;
 
   &:before {
-    content: '\2014 \00A0';
+    content: "\2014 \00A0";
   }
 }
