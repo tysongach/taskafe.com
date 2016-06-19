@@ -1,0 +1,21 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    - if content_for?(:description)
+      meta name="description" content=(yield_content :description)
+    - else
+      meta name="description" content="A micro-roaster in Beacon, NY focusing on Caribbean coffee"
+    - if content_for?(:title)
+      title=(yield_content :title)
+    - else
+      title="Tas Kaf&eacute;"
+    = stylesheet_link_tag :main
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Source+Sans+Pro"
+  body
+    .container
+      = partial "partials/site_header"
+      main role="main"
+        = yield
+    / = partial "partials/analytics"
