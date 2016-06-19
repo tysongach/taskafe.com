@@ -1,5 +1,7 @@
 # Tas Kaf&eacute;
 
+[![CircleCI](https://circleci.com/gh/tysongach/taskafe.com.svg?style=svg)](https://circleci.com/gh/tysongach/taskafe.com)
+
 ## Setup
 
 1. Get the code:
