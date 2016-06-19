@@ -6,15 +6,15 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
 
-  @include media($small-screen-up) {
+  @media (min-width: $small-screen) {
     font-size: $base-font-size * 1.0625;
   }
 
-  @include media($medium-screen-up) {
+  @media (min-width: $medium-screen) {
     font-size: $base-font-size * 1.1875;
   }
 
-  @include media($large-screen-up) {
+  @media (min-width: $large-screen) {
     font-size: $base-font-size * 1.375;
   }
 }

@@ -3,7 +3,8 @@ body {
 }
 
 .container {
-  @include outer-container;
+  @include margin(null auto);
+  max-width: $max-width;
   padding-left: $base-spacing / 2;
   padding-right: $base-spacing / 2;
   position: relative;

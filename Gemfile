@@ -8,7 +8,6 @@ gem "middleman-autoprefixer"
 gem "middleman-gh-pages"
 gem "middleman-livereload"
 gem "middleman-minify-html"
-gem "neat"
 gem "redcarpet"
 gem "sassc"
 gem "scss_lint", require: false
