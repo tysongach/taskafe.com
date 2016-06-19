@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "2.3.1"
 
-gem "bourbon"
+gem "bourbon", "5.0.0.beta.6"
 gem "middleman"
 gem "middleman-autoprefixer"
 gem "middleman-gh-pages"

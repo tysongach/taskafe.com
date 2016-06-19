@@ -2,8 +2,8 @@ $modular-scale-base: 1em;
 $modular-scale-ratio: $perfect-fourth;
 
 // Typography
-$sans-serif: "Source Sans Pro", $helvetica;
-$serif: $georgia;
+$sans-serif: "Source Sans Pro", $font-stack-helvetica;
+$serif: $font-stack-georgia;
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
 
