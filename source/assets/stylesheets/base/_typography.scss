@@ -25,8 +25,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $header-font-family;
-  line-height: $header-line-height;
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
   margin: ($base-spacing * 1.5) 0 ($base-spacing / 1.5);
   text-rendering: optimizeLegibility;
 }
