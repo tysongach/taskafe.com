@@ -1,5 +1,7 @@
-$modular-scale-base: 1em;
-$modular-scale-ratio: $perfect-fourth;
+$bourbon: (
+  "modular-scale-base": 1em,
+  "modular-scale-ratio": $perfect-fourth,
+);
 
 // Typography
 $base-font-family: $font-stack-system;
