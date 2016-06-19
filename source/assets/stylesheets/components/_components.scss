@@ -1,15 +1,6 @@
+@import "container";
+@import "site-header";
+
 body {
   padding-bottom: $base-spacing * 6;
-}
-
-.container {
-  @include margin(null auto);
-  max-width: 24em;
-  padding-left: $base-spacing / 2;
-  padding-right: $base-spacing / 2;
-  position: relative;
-}
-
-.site-header {
-  margin-top: $base-spacing * 3;
 }
