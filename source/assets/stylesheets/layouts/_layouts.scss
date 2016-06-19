@@ -4,7 +4,7 @@ body {
 
 .container {
   @include margin(null auto);
-  max-width: $max-width;
+  max-width: 24em;
   padding-left: $base-spacing / 2;
   padding-right: $base-spacing / 2;
   position: relative;
