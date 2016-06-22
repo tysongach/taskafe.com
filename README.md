@@ -16,7 +16,7 @@
   bundle install
   ```
 
-1. Verify that the app is up and running
+1. Run the local server:
 
   ```
   bundle exec middleman
@@ -25,3 +25,15 @@
   ```
   open http://localhost:4567
   ```
+
+## Deploy
+
+This website is hosted on [GitHub Pages].
+
+1. To deploy, run:
+
+  ```
+  bundle exec rake publish
+  ```
+
+[GitHub Pages]: https://pages.github.com
