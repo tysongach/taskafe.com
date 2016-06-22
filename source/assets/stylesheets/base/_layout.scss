@@ -9,5 +9,23 @@ html {
 }
 
 body {
+  border-image: linear-gradient(to right,
+                                $red 0,
+                                $red 15%,
+                                $gold 15%,
+                                $gold 29%,
+                                $blue 29%,
+                                $blue 43%,
+                                $light-blue 43%,
+                                $light-blue 57%,
+                                $orange 57%,
+                                $orange 71%,
+                                $yellow 71%,
+                                $yellow 85%,
+                                $green 85%,
+                                $green 100%);
+  border-image-slice: 1;
+  border-style: solid;
+  border-width: 1vh 0 1vh;
   padding-bottom: 25vh;
 }

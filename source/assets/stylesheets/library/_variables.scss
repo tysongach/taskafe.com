@@ -23,21 +23,27 @@ $base-z-index: 0;
 $white: #fff;
 $light-gray: #ddd;
 $medium-gray: #999;
-$black: #000;
 $dark-gray: #333;
+$black: #000;
 
-$blue: #0075b2;
+$blue: #3179a4;
+$gold: #a27c34;
+$green: #a3ad44;
+$light-blue: #7cb7e2;
+$orange: #dc6637;
+$red: #d14233;
+$yellow: #fab331;
 
 // Background Color
-$base-background-color: white;
+$base-background-color: tint($black, 8%);
 
 // Font Colors
-$base-font-color: $dark-gray;
-$base-accent-color: $blue;
+$base-font-color: shade($white, 15%);
+$base-accent-color: $orange;
 
 // Link Colors
 $base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15);
+$hover-link-color: shade($base-accent-color, 15%);
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
 
