@@ -1,5 +1,16 @@
+.site-header {
+  position: relative;
+}
+
 .site-header__logo {
   width: percentage(2/3);
+
+  @include media-from(55em) {
+    @include position(absolute, 0 null null 0);
+    margin: 0;
+    transform: rotate(-90deg) translateX(calc(-100% - 0.4em)) translateY(calc(-100% - 2rem));
+    transform-origin: top left;
+  }
 }
 
 .site-header__logo,

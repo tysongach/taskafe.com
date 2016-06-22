@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *,
@@ -28,4 +29,5 @@ body {
   border-image-slice: 1;
   border-style: solid;
   border-width: 1.5vh 0 1.5vh;
+  min-height: 100%;
 }
