@@ -113,9 +113,9 @@ GEM
       bundler
       ffi (~> 1.9.6)
       sass (>= 3.3.0)
-    scss_lint (0.48.0)
+    scss_lint (0.49.0)
       rake (>= 0.9, < 12)
-      sass (~> 3.4.15)
+      sass (~> 3.4.20)
     servolux (0.12.0)
     slim (3.0.7)
       temple (~> 0.7.6)
