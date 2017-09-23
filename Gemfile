@@ -9,4 +9,3 @@ gem "middleman-livereload"
 gem "middleman-minify-html"
 gem "redcarpet"
 gem "sassc"
-gem "scss_lint", require: false
