@@ -1,10 +1,4 @@
 module ApplicationHelpers
-  def markdown(contents)
-    renderer = Redcarpet::Render::HTML
-    markdown = Redcarpet::Markdown.new(renderer, extensions = {})
-    markdown.render(contents)
-  end
-
   def svg(name)
     root = Middleman::Application.root
     file_path = "#{root}/source/assets/images/#{name}.svg"
