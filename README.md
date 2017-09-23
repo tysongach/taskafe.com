@@ -26,14 +26,9 @@
     open http://localhost:4567
     ```
 
-## Deploy
+## Hosting & Deployment
 
-This website is hosted on [GitHub Pages].
+The website is hosted on [Netlify], and is automatically built and deployed when
+changes are pushed to the `master` branch.
 
-1. To deploy, run:
-
-    ```
-    bundle exec rake publish
-    ```
-
-[GitHub Pages]: https://pages.github.com
+[Netlify]: https://www.netlify.com/
