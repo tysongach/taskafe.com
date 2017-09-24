@@ -5,11 +5,6 @@ activate :directory_indexes
 
 set :css_dir, "assets/stylesheets"
 set :images_dir, "assets/images"
-set :markdown_engine, :redcarpet
-set :markdown do |markdown|
-  markdown.smartypants = true
-  markdown.with_toc_data = true
-end
 
 page "/*.xml", layout: false
 page "/*.json", layout: false
