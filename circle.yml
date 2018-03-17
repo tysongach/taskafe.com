@@ -1,6 +1,0 @@
-compile:
-  override:
-    - bundle exec middleman build --verbose
-test:
-  override:
-    - echo "No tests. See the 'compile' step."
