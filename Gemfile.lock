@@ -119,7 +119,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bourbon (= 5.0.0)
+  bourbon (~> 5.0)
   middleman
   middleman-autoprefixer
   middleman-livereload
@@ -130,4 +130,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.16.0.pre.2
+   1.16.1
