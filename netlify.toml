@@ -3,6 +3,12 @@
   command = "bundle exec middleman build --verbose"
 
 [[redirects]]
+  from = "https://taskafe.netlify.app/*"
+  to = "https://www.taskafe.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://taskafe.netlify.com/*"
   to = "https://www.taskafe.com/:splat"
   status = 301
