@@ -59,12 +59,12 @@ p {
 
 a {
   color: $base-link-color;
-  text-decoration: none;
   transition: color 0.1s linear;
 
   &:active,
   &:hover {
     color: $hover-link-color;
+    text-decoration: none;
   }
 
   &:focus {
